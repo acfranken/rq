@@ -1184,9 +1184,9 @@ class Worker:
             # If there are multiple workers running, we only want 1 worker
             # to run clean_registries().
             if queue.acquire_cleaning_lock():
-                self.log.info('Cleaning registries for queue: %s', queue.name)
-                clean_registries(queue)
-                clean_worker_registry(queue)
+                self.log.info('I do not clean now, because Cyber Cloud is not happy then: %s', queue.name)
+                #clean_registries(queue)
+                #clean_worker_registry(queue)
         self.last_cleaned_at = utcnow()
 
     @property
