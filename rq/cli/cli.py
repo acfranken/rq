@@ -179,8 +179,8 @@ def info(cli_config, interval, raw, only_queues, only_workers, by_queue, queues,
                 qs = cli_config.queue_class.all()
 
             for queue in qs:
-                clean_registries(queue)
-                clean_worker_registry(queue)
+                #clean_registries(queue)
+                #clean_worker_registry(queue)
 
             refresh(interval, func, qs, raw, by_queue,
                     cli_config.queue_class, cli_config.worker_class)
